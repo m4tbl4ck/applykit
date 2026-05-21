@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM python:3.12-slim-bookworm
 
 # WeasyPrint + PDF system dependencies
 RUN apt-get update --fix-missing && apt-get install -y --no-install-recommends \
