@@ -69,3 +69,4 @@ volumes:
 
 networks:
   coolify:
+    external: true
