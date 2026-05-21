@@ -32,7 +32,7 @@ services:
       DATABASE_URL: sqlite:////data/applykit.db
       CORS_ORIGINS: '["https://applykit.mattschwarz.io"]'
     networks:
-      - applykit
+      - coolify
     restart: unless-stopped
     labels:
       - "traefik.enable=false"
@@ -46,7 +46,7 @@ services:
     depends_on:
       - backend
     networks:
-      - applykit
+      - coolify
     restart: unless-stopped
     labels:
       - "traefik.enable=false"
@@ -59,7 +59,7 @@ services:
       - frontend
       - backend
     networks:
-      - applykit
+      - coolify
     restart: unless-stopped
     # This is the ONLY publicly exposed service.
     # Coolify will attach Traefik here automatically.
@@ -68,4 +68,4 @@ volumes:
   applykit-data:
 
 networks:
-  applykit:
+  coolify:
